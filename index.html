@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat & Call</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="left">
+      <h2>Room: <span id="room-name">main</span></h2>
+      <div class="people">
+        <strong>Connected:</strong>
+        <ul id="peers"></ul>
+      </div>
+
+      <div class="chat-box">
+        <div id="messages" class="messages"></div>
+        <form id="chat-form">
+          <input id="name" placeholder="Your name" value="Shubham" />
+          <input id="message" placeholder="Type a message..." autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="videos">
+        <div>
+          <h4>You</h4>
+          <video id="localVideo" autoplay muted playsinline></video>
+        </div>
+        <div>
+          <h4>Remote</h4>
+          <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startCam">Start Camera</button>
+        <button id="callBtn">Call</button>
+        <button id="hangupBtn" disabled>Hang Up</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
