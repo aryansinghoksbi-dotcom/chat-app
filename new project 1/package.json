@@ -1,0 +1,13 @@
+{
+  "name": "chat-call-demo",
+  "version": "1.0.0",
+  "description": "Simple chat + WebRTC call demo with Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
